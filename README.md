@@ -1,8 +1,8 @@
 # BlueLib Catalogue - BIT225 Assignment 2
 
 ## Student
-Name: [Your Full Name]
-Student ID: [Your Student ID]
+Name: Prisca Burgesson
+Student ID: 400622039126
 
 ## Description
 BlueLib Catalogue is a responsive single-page front-end for the BlueCrest College Library.
@@ -26,6 +26,3 @@ BlueLib Catalogue is a responsive single-page front-end for the BlueCrest Colleg
 - index.html
 - css/style.css
 - js/app.js
-
-## Note
-Replace the placeholder name and student ID in index.html and this README before submission.
