@@ -1,3 +1,5 @@
+// Development note: This code was created with assistance from OpenAI ChatGPT and reviewed by the student.
+
 // BlueLib Catalogue JavaScript
 
 // Initial book data stored in an array.
