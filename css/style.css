@@ -1,0 +1,222 @@
+/* BlueLib Catalogue stylesheet */
+
+/* CSS custom properties for the main colours */
+:root {
+    --primary-color: #123b63;
+    --secondary-color: #eaf3fb;
+    --accent-color: #2f80ed;
+    --text-color: #222;
+    --white: #ffffff;
+    --border-color: #cfd8e3;
+    --success-color: #247a3d;
+    --error-color: #b42318;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background: #f7f9fc;
+    line-height: 1.5;
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0 0 0.25rem;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--white);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+input,
+select {
+    padding: 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--white);
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.book-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.book-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.book-card p {
+    margin: 0.5rem 0;
+}
+
+.book-card button,
+form button {
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    background: var(--accent-color);
+    color: var(--white);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book-card button:hover,
+form button:hover {
+    opacity: 0.85;
+}
+
+.book-card button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: var(--error-color);
+}
+
+form {
+    max-width: 600px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+}
+
+.form-message {
+    min-height: 1.5rem;
+    margin: 0 0 1rem;
+    font-weight: bold;
+}
+
+.form-message.error {
+    color: var(--error-color);
+}
+
+.form-message.success {
+    color: var(--success-color);
+}
+
+footer {
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 900px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 card per row below 600px */
+@media (max-width: 599px) {
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
